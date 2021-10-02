@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;    
+}
+
+header {
+  height: 10vh;
+  background: #f4f4f4;  
+}
+
+
+header .nav {
+  display: flex;
+  height: 100%;  
+  background: #00838f;
+  justify-content: center;
+  align-items: center;
+}
+
+header .nav .links {
+  flex-grow: 1;
+}
+
+header .nav .links a {
+  text-decoration: none;
+  margin: 20px;
+  color: #eeee;
+}
+
+header .nav .cart {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #005662;
+  padding: 15px;
+  border-radius: 8px;
+  color: #f4f4f4;
+  transition: all 0.3s ease;
+}
+
+header .nav .cart a {
+  text-decoration: none;
+  color: #eeee;
+}
+
+header .nav .cart:hover {
+  background: #4fb3bf;
+  color: #454545;
+}
+
+
+/* footer */
+
+.contact{     
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #00838f;    
+}
+
+.social-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.social-nav  li{
+    margin-right: 20px;
+    list-style: none;
+    padding: 10px;
+}
+
+.social-nav li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-weight: 700;   
+}
+
+.social-nav  li.facebook{
+    background: #3b5998;    
+      
+}
+
+.social-nav  li.twitter{
+    background: #00acee;    
+}
+
+.social-nav li.instagram{
+    background:linear-gradient(90deg, rgba(64,93,230,1) 0%, rgba(131,58,180,1) 35%, rgba(225,48,108,1) 100%);
+}
+
+.social-nav li.pinterest{
+    background: #c8232c;
+}
