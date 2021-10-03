@@ -13,6 +13,9 @@
       getCartItems: () => {
         return JSON.parse(localStorage.getItem("cart"));
       },
+      getProducts:() => {
+        return JSON.parse(localStorage.getItem("products"))
+      }
     };
     return lib;
   };
@@ -34,16 +37,13 @@ const setCartLength = () => {
 const insertProductsAtHome = () => {
   const elementInsert = document.querySelector(".products-home");
   if (elementInsert) {
-    const products = window.$.getCartItems();
-    products.pop();
+    const products = $.getProducts();
     products.forEach((data, index) => {
       if (index > 2) return;
       elementInsert.innerHTML += `
-      <div class="card">
-        <img src="${data.image}"/>
-        <h4>${data.name}</h4>
-        <h5>${data.price}</h5>
-        <a href="product.html?product=${data.name}">Ver producto</a>
+      <div class="card">        
+        <h4>${data.category}</h4>        
+        <a href="productos.html?products=${data.category}">Ver productos</a>
       </div>
     `;
     });
