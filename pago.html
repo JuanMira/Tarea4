@@ -21,7 +21,26 @@
       </header>
       <main>
         <div class="content">
-          
+          <div class="pay-form">
+            <form>
+              <div class="input-form">
+                <input type="text" placeholder="Nombre completo" id="completeName" required/>
+              </div>
+              <div class="input-form">
+                <input type="email" placeholder="Correo electronico" id="email" required/>
+              </div>
+              <div class="input-form">
+                <input type="number" placeholder="No. de tarjeta" id="cardNumber" required/>
+              </div>              
+              <div class="input-form-double">
+                <input type="date" placeholder="F. Vencimiento MM/AA" id="date" required/>
+                <input type="text" maxlength="3" placeholder="CVV" id="ccv"/>
+              </div>
+              <button type="submit">
+                PAGAR
+              </button>
+            </form>
+          </div>
         </div>
       </main>
       <footer>
