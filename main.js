@@ -13,9 +13,13 @@
       getCartItems: () => {
         return JSON.parse(localStorage.getItem("cart"));
       },
-      getProducts:() => {
-        return JSON.parse(localStorage.getItem("products"))
-      }
+      getProducts: () => {
+        return JSON.parse(localStorage.getItem("products"));
+      },
+      getUrlParams: () => {
+        const params = window.location.search;
+        return new URLSearchParams(params);
+      },
     };
     return lib;
   };
@@ -50,5 +54,8 @@ const insertProductsAtHome = () => {
   }
 };
 
-setCartLength();
+$.setCartLength = setCartLength
+
+$.setCartLength()
+
 insertProductsAtHome();

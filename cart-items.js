@@ -16,6 +16,6 @@ $.getCartItems().forEach(data=>{
 
 
 const tableFoot = document.querySelector('.subtotal').innerHTML =  `    
-        <h4> Subtotal ${subtotal} </h4>
+        <h4> Subtotal $ ${subtotal} </h4>
         <a href="./pago.html" class="button"> Pagar </a>
 `

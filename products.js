@@ -6,8 +6,7 @@ $.getProducts().forEach((data) => {
     `;
 });
 
-const params = window.location.search;
-const urlParams = new URLSearchParams(params);
+const urlParams = $.getUrlParams()
 const param = urlParams.get("products");
 
 const productsContent = document.querySelector(".products");
@@ -19,7 +18,7 @@ if (param == null) {
             <img src="${data.image}"/>      
             <h4>${data.name}</h4>    
             <h5>$ ${data.price}</h5>    
-            <a href="producto.html?products=${data.name}">Ver producto</a>
+            <a href="producto.html?product=${data.name}">Ver producto</a>
         </div>
         `;
   });
@@ -32,7 +31,7 @@ $.getProducts().forEach((data) => {
         <img src="${data.image}"/>      
         <h4>${data.name}</h4>    
         <h5>$ ${data.price}</h5>    
-        <a href="producto.html?products=${data.name}">Ver producto</a>
+        <a href="producto.html?product=${data.name}">Ver producto</a>
     </div>
     `;
   }
